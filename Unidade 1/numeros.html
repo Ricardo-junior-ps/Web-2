@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Manipulação de Array</title>
+</head>
+<body>
+    <h1>Manipulação de Array com Métodos</h1>
+    <p>Abra o console do desenvolvedor para ver os resultados.</p>
+
+    <script>
+        const numeros = [3, 7, 2, 9, 4];
+        console.log("Array original:", numeros);
+
+        // a) Exiba o maior e o menor valor do array
+        console.log("\nMaior e Menor Valor");
+        const maiorValor = Math.max(...numeros);
+        const menorValor = Math.min(...numeros);
+        console.log("Maior valor do array:", maiorValor);
+        console.log("Menor valor do array:", menorValor);
+
+        // b) Crie um novo array chamado dobro que contenha o dobro de cada número do array original
+        console.log("\nDobro dos Números");
+        const dobro = numeros.map(function(numero) {
+            return numero * 2;
+        });
+  
+        console.log("Array com o dobro dos números:", dobro);
+
+        // c) Filtre e exiba apenas os números maiores que 5 do array original
+        console.log("\nNúmeros Maiores que 5");
+        const maioresQueCinco = numeros.filter(function(numero) {
+            return numero > 5;
+        });
+
+        console.log("Números maiores que 5:", maioresQueCinco);
+
+    </script>
+</body>
+</html>

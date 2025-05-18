@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Manipulação de Objeto Carro</title>
+</head>
+<body>
+    <h1>Manipulação de Objeto Literal: Carro</h1>
+    <p>Abra o console do desenvolvedor para ver os resultados.</p>
+
+    <script>
+
+        const carro = {
+            marca: "Fiat", // Exemplo de valor inicial
+            modelo: "Mobi",  // Exemplo de valor inicial
+            ano: 2022,      // Exemplo de valor inicial
+            exibirInfo: function() {
+                console.log(`Marca: ${this.marca} | Modelo: ${this.modelo} | Ano: ${this.ano}`);
+            }
+        };
+
+        console.log("Objeto carro");
+        console.log(carro);
+
+        // a) método exibirInfo()
+        console.log("\nCaracterísticas do Carro()");
+        carro.exibirInfo();
+
+        // b) Adicionar nova propriedade chamada cor com o valor "Preto"
+        console.log("\nAdicionando propriedade 'cor'");
+        carro.cor = "Preto";
+        console.log("Propriedade 'cor' adicionada.");
+
+
+        // c) Atualizando ano do veiculo 
+        console.log("\nAtualizando a propriedade 'ano'");
+        carro.ano = 2025; // Usando o ano fornecido no contexto
+        console.log("Propriedade 'ano' atualizada para 2025.");
+
+        // d) Exiba o objeto completo no console para verificar as alterações
+        console.log("\nObjeto carro completo após as alterações ---");
+        console.log(carro);
+
+        // Chamando método exibirInfo() após as alteração
+        console.log("\n Novas características do Carro");
+        carro.exibirInfo();
+
+    </script>
+</body>
+</html>

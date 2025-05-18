@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculadora de IMC</title>
+</head>
+<body>
+    <h1>Calculadora de IMC</h1>
+    <p>Abra o console do desenvolvedor para ver os resultados.</p>
+
+    <script>
+        function calcularIMC(peso, altura) {
+            // Validação básica de entrada (opcional, mas recomendável)
+            if (typeof peso !== 'number' || typeof altura !== 'number' || peso <= 0 || altura <= 0) {
+                return "Por favor, insira valores válidos para peso e altura.";
+            }
+
+            const imc = peso / (altura * altura);
+            let mensagem;
+
+            if (imc < 18.5) {
+                mensagem = "Abaixo do peso";
+            } else if (imc < 25) { // 18.5 <= IMC < 25
+                mensagem = "Peso normal";
+            } else if (imc < 30) { // 25 <= IMC < 30
+                mensagem = "Sobrepeso";
+            } else { // IMC >= 30
+                mensagem = "Obesidade";
+            }
+
+
+            return `Seu IMC é ${imc.toFixed(2)}. Classificação: ${mensagem}`;
+        }
+
+        console.log("Exemplo 1:");
+        let resultado1 = calcularIMC(70, 1.75); // Peso: 70kg, Altura: 1.75m
+        console.log(resultado1);
+
+        console.log("\nExemplo 2:");
+        let resultado2 = calcularIMC(50, 1.60); // Peso: 50kg, Altura: 1.60m
+        console.log(resultado2);
+
+        console.log("\nExemplo 3:");
+        let resultado3 = calcularIMC(90, 1.70); // Peso: 90kg, Altura: 1.70m
+        console.log(resultado3);
+
+        console.log("\nExemplo 4:");
+        let resultado4 = calcularIMC(110, 1.80); // Peso: 110kg, Altura: 1.80m
+        console.log(resultado4);
+
+    </script>
+</body>
+</html>

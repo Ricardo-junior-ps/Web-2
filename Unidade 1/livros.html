@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Orientação a Objetos: Livro</title>
+</head>
+<body>
+    <h1>Orientação a Objetos com Classes: Livro</h1>
+    <p>Abra o console do desenvolvedor para ver os resultados.</p>
+
+    <script>
+
+        class Livro {
+            constructor(titulo, autor, ano) {
+                this.titulo = titulo;
+                this.autor = autor;
+                this.ano = ano;
+            }
+
+            // Método para exibir os detalhes do livro
+            detalhes() {
+                console.log(`Livro: ${this.titulo} | Autor: ${this.autor} | Ano: ${this.ano}`);
+            }
+        }
+
+        //Criando Instâncias 
+        const livro1 = new Livro("O Senhor dos Anéis", "J.R.R. Tolkien", 1954);
+        const livro2 = new Livro("Dom Casmurro", "Machado de Assis", 1899);
+
+        console.log("\nDetalhes do Livro 1:");
+        livro1.detalhes();
+
+        console.log("\nDetalhes do Livro 2:");
+        livro2.detalhes();
+
+    </script>
+</body>
+</html>

@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <title>Palíndromo</title>
+</head>
+<body>
+    <h1>Manipulação de Objeto Literal: Carro</h1>
+    <p>Abra o console do desenvolvedor para ver os resultados.</p>
+    
+  <script>
+    // Solicita a palavra ao usuário
+    const palavra = prompt("Digite uma palavra:");
+
+    if (palavra) {
+      // a) Exibe a quantidade de caracteres
+      console.log(`A palavra "${palavra}" tem ${palavra.length} caracteres.`);
+
+      // b) Verifica se é um palíndromo
+      const invertida = palavra.split('').reverse().join('');
+      if (palavra.toLowerCase() === invertida.toLowerCase()) {
+        console.log("É um palíndromo!");
+      } else {
+        console.log("Não é um palíndromo.");
+      }
+    } else {
+      console.log("Nenhuma palavra foi digitada.");
+    }
+  </script>
+</body>
+</html>
