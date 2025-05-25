@@ -1,0 +1,62 @@
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background: #f4f4f4;
+    margin: 0;
+    font-family: Arial, sans-serif;
+}
+
+
+.calculadora {
+    border: 2px solid #333;
+    border-radius: 20px;
+    overflow: hidden;
+    background: #fff;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+}
+
+.visor {
+    background: #fff;
+    padding: 20px;
+    font-size: 2em;
+    text-align: right;
+    border-bottom: 1px solid #ccc;
+}
+
+.botoes {
+    display: grid;
+    grid-template-columns: repeat(4, 80px);
+    grid-gap: 5px;
+    padding: 10px;
+}
+
+.botao {
+    padding: 20px;
+    font-size: 1.5em;
+    border: none;
+    border-radius: 10px;
+    background: #4a6fa5;
+    color: white;
+    cursor: pointer;
+    transition: background 0.2s;
+}
+
+.botao:hover {
+    background: #3b5d85;
+}
+
+.cinza {
+    background: #b0bec5;
+    color: black;
+}
+
+.laranja {
+    background: #ff9800;
+    color: white;
+}
+
+.zero {
+    grid-column: span 2;
+}
