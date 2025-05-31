@@ -1,0 +1,70 @@
+body {
+  font-family: Arial, sans-serif;
+  margin: 40px;
+  background-color: aliceblue;  
+}
+
+h1 {
+  color: #333;
+}
+
+#tarefaInput {
+  padding: 8px;
+  width: 250px;
+}
+
+button {
+  padding: 8px 12px;
+  margin-left: 5px;
+  cursor: pointer;
+  border: none;
+  border-radius: 4px;
+  color: white;
+}
+
+.botaoAdicionar {
+  background-color: #007BFF; 
+}
+
+.botoes {
+  display: flex;
+  gap: 5px;
+}
+
+.botoes button {
+  font-size: 12px;
+  padding: 6px 10px;
+  border-radius: 4px;
+  border: none;
+  color: white;
+}
+
+.botaoFinalizar {
+  background-color: #28a745; 
+}
+
+.botaoRemover {
+  background-color: #dc3545; 
+}
+
+ul {
+  margin-top: 20px;
+  padding: 0;
+}
+
+li {
+  list-style: none;
+  background: #fff;
+  padding: 10px;
+  margin-bottom: 8px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-radius: 4px;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+}
+
+li.finalizada span {
+  text-decoration: line-through;
+  color: #a49999;
+}
